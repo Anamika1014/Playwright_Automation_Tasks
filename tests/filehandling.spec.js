@@ -5,7 +5,8 @@ test('upload file', async ({ page }) => {
   await page.locator('input[type="file"]').setInputFiles([
     'C:/Users/yangy/Downloads/MOHAN.pdf',
     'C:/Users/yangy/OneDrive/Desktop/AnamikaResume.pdf',
-    '"C:\\Users\\yangy\\Downloads\\WhatsApp Image 2026-11-18 at 5.55.36 AM.jpeg"'
+    '"C:\\Users\\yangy\\Downloads\\WhatsApp Image 2026-11-18 at 5.55.36 AM.jpeg"',
+    "C:\\Users\\yangy\\Downloads\\WhatsApp Image 2026-11-17 at 9.01.31 PM.jpeg"
   ]);
   await page.getByRole('button', { name: 'Validate and upload' }).click();
 

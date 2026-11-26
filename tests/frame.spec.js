@@ -63,6 +63,7 @@ test("nested frame handling", async({page})=>{
     await mframe3_2.locator('#hindichbx').check();
     await mframe3_2.locator('#spanishchbx').check();
     await mframe3_2.locator('#email').fill('anamikarajalingam@gmail.com'); 
+    await mframe3_2.locator('#password').fill("Ana@1014");
     // await mframe3_2.locator('#password').fill("Ana@1015"); 
     
 })

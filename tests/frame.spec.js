@@ -32,10 +32,7 @@ test("frame handling 4", async({page})=>{
     await frame.getByRole('link',{name:'About'}).click();
     await frame.getByRole('link',{name:'Load More'}).click();
     await page.locator('//span[text()="Sortable"]').click();
-
 })
-
-
 test("nested frame handling", async({page})=>{
     await page.goto("https://www.hyrtutorials.com/p/frames-practice.html");
 
@@ -49,22 +46,23 @@ test("nested frame handling", async({page})=>{
     await mframe2.locator('#englishchbx').check();
     await mframe2.locator('#hindichbx').check();
     await mframe2.locator('#spanishchbx').check();
-    await mframe2.locator('#email').fill('anamikaraajalingam@gmail.com')
-
+    await mframe2.locator('#email').fill('anamikaraajalingam@gmail.com');
+    await mframe2.locator('#password').fill("Ana@1014");
+    await mframe2.locator('#registerbtn').click();
 
     const mframe3 = page.frameLocator('#frm3');
     const mframe3_1 = mframe3.frameLocator('#frm1');
     const mframe3_2 = mframe3.frameLocator('#frm2');
     
     await mframe3_1.locator("#course").selectOption({value:"java"});
-    
+
     await mframe3_2.locator("#firstName").fill("Anamika");
     await mframe3_2.locator('#lastName').fill("Raajalingam");
     await mframe3_2.locator('#femalerb').check();
     await mframe3_2.locator('#englishchbx').check();
     await mframe3_2.locator('#hindichbx').check();
     await mframe3_2.locator('#spanishchbx').check();
-    await mframe3_2.locator('#email').fill('anamikaraajalingam@gmail.com')
-
+    await mframe3_2.locator('#email').fill('anamikarajalingam@gmail.com'); 
+    // await mframe3_2.locator('#password').fill("Ana@1015"); 
     
 })
